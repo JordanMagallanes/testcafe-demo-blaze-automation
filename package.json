@@ -1,0 +1,15 @@
+{
+    "name": "technical_take_home",
+    "version": "1.0.0",
+    "main": "index.js",
+
+    "scripts":{
+      "local:chrome": "./node_modules/.bin/testcafe 'chrome' tests/"
+    },
+    "author": "SDET: Jordan Javier Magallanes Flores",
+    "dependencies": {
+      "testcafe":"3.4.0",
+      "testcafe-reporter-cucumber-json": "6.3.0",
+      "testcafe-reporter-list": "2.2.0"
+    }
+}
