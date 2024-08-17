@@ -10,6 +10,7 @@ const { default: homePage } = require("../pages/home.page");
 const { default: addToCartPage } = require("../pages/addToCart.page");
 const { default: cartPage } = require("../pages/cart.page");
 const { data } = require("../data/data");
+const { default: loginPage } = require("../pages/login.page");
 
 fixture`Add To Cart`
     .page`https://www.demoblaze.com/`
@@ -37,5 +38,4 @@ test.meta('testcase', 'addSamsung')
     // Place the order
     await cartPage.clickPlaceOrder();
     await cartPage.placeOrder();
-
 });

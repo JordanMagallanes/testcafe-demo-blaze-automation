@@ -8,6 +8,7 @@ export default class BasePage{
         this.btnCart = Selector('#cartur');
         this.btnLogIn = Selector('#login2');
         this.btnSignUp = Selector('#signin2');
+        this.lblUsername = Selector('#nameofuser');
     }
 
     /**
@@ -57,5 +58,11 @@ export default class BasePage{
      */
     async maximizeWindow(){
         await t.maximizeWindow();
+    }
+
+    async isUserLogged(){
+        const welcomeMessage = this.lblUsername.innerText;
+
+        return (await welcomeMessage).includes('Welcome');
     }
 }
